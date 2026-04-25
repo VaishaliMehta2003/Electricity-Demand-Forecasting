@@ -2,6 +2,7 @@ import streamlit as st
 import pickle
 import pandas as pd
 import numpy as np
+import os
 
 # Page config
 st.set_page_config(page_title="Electricity Demand Forecasting", layout="wide")
