@@ -14,7 +14,13 @@ st.sidebar.header("User Input")
 
 # Load model
 @st.cache_resource
+
+
 def load_model():
+    if not os.path.exists("model.pkl"):
+        url = "https://drive.google.com/uc?export=download&id=1Ud8k5z-mmUjE1CmhWGh4Q1E2QEfb-sTM"
+        gdown.download(url, "model.pkl", quiet=False)
+    
     return pickle.load(open("model.pkl", "rb"))
 
 model = load_model()
