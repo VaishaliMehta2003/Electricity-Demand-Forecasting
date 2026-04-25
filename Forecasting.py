@@ -20,7 +20,7 @@ st.sidebar.header("User Input")
 
 def load_model():
     if not os.path.exists("model.pkl"):
-        url = "url = "https://drive.google.com/uc?id=1Ud8k5z-mmUjE1CmhWGh4Q1E2QEfb-sTM""
+        url = "https://drive.google.com/uc?id=1Ud8k5z-mmUjE1CmhWGh4Q1E2QEfb-sTM"
         gdown.download(url, "model.pkl", quiet=False)
     
     return pickle.load(open("model.pkl", "rb"))
